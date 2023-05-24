@@ -5,7 +5,6 @@ ul{
   
 }
 li{
-  min-width: 300px;
   display: flex;
   justify-content: space-between;
 }

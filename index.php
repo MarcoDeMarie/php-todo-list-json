@@ -22,12 +22,21 @@
       <h1>TO DO LIST</h1>
       <div class="tasks">
         <ul v-for="item in list">
-          <li>{{ item.text }}<i class="fa-solid fa-trash-can"></i></li>
+          <li>{{ item.text }}<span><i class="fa-solid fa-trash-can"></span></i></li>
         </ul>
       </div>
       <div class="add-tasks">
-        <input type="text" name="newTask" placeholder="Inserisci nuova task">
-        <button type="button" class="btn btn-primary mx-3">Add Task</button>
+        <input
+          v-model.trim="readTask"
+          type="text"
+          @keyup.enter = "addTask"
+          name="newTask"
+          placeholder="Inserisci nuova task">
+        <button
+          @click="addTask"
+          type="button"
+          class="btn btn-primary mx-3">Add
+          Task</button>
       </div>
     </div>
     </div>
